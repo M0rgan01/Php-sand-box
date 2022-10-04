@@ -1,6 +1,6 @@
 <?php
 
-require 'Creneau.php';
+namespace testPHP\classes;
 
 // instantiation
 $creneau = new Creneau(9, 17);

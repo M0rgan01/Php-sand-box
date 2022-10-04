@@ -1,5 +1,7 @@
 <?php
 
+namespace testPHP\classes;
+
 abstract class CarConstructeur
 {
     // force les classes qui hérite à redéfinir la fonction

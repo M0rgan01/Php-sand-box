@@ -1,5 +1,6 @@
 <?php
-require_once "CarConstructeur.php";
+
+namespace testPHP\classes;
 
 class Peugeot extends CarConstructeur
 {

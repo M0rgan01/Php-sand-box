@@ -1,5 +1,7 @@
 <?php
 
+namespace testPHP\classes;
+
 class Creneau
 {
 
