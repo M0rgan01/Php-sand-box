@@ -1,5 +1,7 @@
 <?php
 
+// VARIABLE
+
 // simple quote
 $nom = 'Doe';
 $prenom = 'Jhon';
@@ -18,3 +20,10 @@ $moyenne = ($note + $note2) / 2;
 
 echo "\nBonjour $prenom $nom vous avez eu $moyenne de moyenne";
 
+
+// CONSTANTE
+
+// v1
+define('MA_CONSTANTE', 123);
+// v2
+const MA_CONSTANTE = 123;
