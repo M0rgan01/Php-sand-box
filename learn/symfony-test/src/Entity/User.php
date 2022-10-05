@@ -2,11 +2,34 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
 class User
 {
+    /**
+     * @var int|null
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue()
+     */
     private ?int $id;
+    /**
+     * @var string
+     * @ORM\Column(unique=true)
+     */
     private string $email;
+    /**
+     * @var string
+     * @ORM\Column
+     */
     private string $password;
+    /**
+     * @var string
+     * @ORM\Column
+     */
     private string $name;
 
     /**

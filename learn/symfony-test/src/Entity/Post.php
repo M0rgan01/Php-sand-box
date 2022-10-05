@@ -2,15 +2,38 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
 class Post
 {
     /**
      * @var int|null
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue()
      */
     private ?int $id;
+    /**
+     * @var string
+     * @ORM\Column(type="text")
+     */
     private string $content;
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     */
     private \DateTimeInterface $postedAt;
+    /**
+     * @ORM\ManyToOne(targetEntity="User"))
+     */
     private User $author;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="User")
+     * @ORM\JoinTable(name="post_likes")
+     */
     private array $likers;
 
     public function __construct()

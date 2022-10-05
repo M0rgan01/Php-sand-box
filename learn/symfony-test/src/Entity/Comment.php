@@ -2,15 +2,36 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ */
 class Comment
 {
     /**
      * @var int|null
+     * @ORM\Id()
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue()
      */
     private ?int $id;
+    /**
+     * @var string
+     * @ORM\Column(type="text")
+     */
     private string $message;
+    /**
+     * @ORM\Column(type="datetime_immutable")
+     */
     private \DateTimeInterface $postedAt;
+    /**
+     * @ORM\ManyToOne(targetEntity="User"))
+     */
     private User $author;
+    /**
+     * @ORM\ManyToOne(targetEntity="Post"))
+     */
     private Post $post;
 
     public function __construct()
