@@ -8,6 +8,12 @@
 $ php -S localhost:8000
 ```
 
+### Démarrer un server symfony
+
+```bash
+$ symfony server:start
+```
+
 ### Trouver le fichier php.ini
 
 ```bash
