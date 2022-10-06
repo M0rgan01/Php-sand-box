@@ -1,7 +1,11 @@
 # validation des entités
 
-`$ bin/console doctrine:schema:valid`
+```bash
+$ bin/console doctrine:schema:valid
+```
 
 # Update des entités
 
-`$ bin/console doctrine:schema:update --force`
+```bash
+$ bin/console doctrine:schema:update --force
+```
