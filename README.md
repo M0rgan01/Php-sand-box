@@ -14,6 +14,12 @@ $ php -S localhost:8000
 $ symfony server:start
 ```
 
+ou
+
+```bash
+$ php -S localhost:8000 -t public/
+```
+
 ### Trouver le fichier php.ini
 
 ```bash
@@ -21,6 +27,12 @@ $ php --ini
 ```
 
 ### Récupération des dépendances
+
+```bash
+$ composer install
+```
+
+### Mise à niveau des dépendances
 
 ```bash
 $ composer update
@@ -31,7 +43,7 @@ $ composer update
 #### Mise en place de la DB
 
 ```bash
-$ docker build -t php-dev .
+$ docker compose up -d
 ```
 
 #### Création de l'image de dev
