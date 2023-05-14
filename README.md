@@ -20,6 +20,12 @@ ou
 $ php -S localhost:8000 -t public/
 ```
 
+ou dans un conteneur
+
+```bash
+$ docker compose -f .docker/docker-compose.yml run -p 8000:8000 php-fpm php -S 0.0.0.0:8000 -t public/
+```
+
 ### Trouver le fichier php.ini
 
 ```bash
@@ -48,7 +54,7 @@ $ docker compose -f .docker/docker-compose.yml up -d
 #### Utilisation de l'image de dev
 
 ```bash
-$ docker compose run php-fpm ${commande}
+$ docker compose -f .docker/docker-compose.yml run php-fpm ${commande}
 ```
 
 ### Doctrine
