@@ -40,22 +40,15 @@ $ composer update
 
 ### Docker
 
-#### Mise en place de la DB
-
+#### Build and run
 ```bash
-$ docker compose up -d
-```
-
-#### Création de l'image de dev
-
-```bash
-$ docker build -t php-dev .
+$ docker compose -f .docker/docker-compose.yml up -d
 ```
 
 #### Utilisation de l'image de dev
 
 ```bash
-$ docker run --net=host -v=$(pwd):/usr/src/myapp php-dev ${commande}
+$ docker compose run php-fpm ${commande}
 ```
 
 ### Doctrine

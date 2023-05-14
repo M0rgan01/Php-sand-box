@@ -7,6 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "doctrine/annotations": "^2.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.13",
@@ -17,6 +18,9 @@
         "symfony/proxy-manager-bridge": "6.1.*",
         "symfony/runtime": "6.1.*",
         "symfony/yaml": "6.1.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.1.3"
     },
     "config": {
         "allow-plugins": {
@@ -59,6 +63,9 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "unit-tests": [
+            "@php ./vendor/phpunit/phpunit/phpunit ./tests"
         ]
     },
     "conflict": {
