@@ -1,3 +1,7 @@
+home:
+    path: /
+    controller: App\Controller\BasicController::index
+
 when@dev:
     _errors:
         resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
